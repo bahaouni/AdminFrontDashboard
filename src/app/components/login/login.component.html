@@ -1,0 +1,10 @@
+<h1>Login page </h1>
+<input name="email" type="email"  [(ngModel)]="email" />
+<h3>password</h3>
+<input name="password" type="password"  [(ngModel)]="password" />
+<p>email={{email}} password : {{password}}</p>
+<button (click)="handleLogin()">Login</button>
+<button (click)="handleLogout()">logout</button>
+
+
+

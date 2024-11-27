@@ -1,0 +1,14 @@
+/* products.component.css */
+.shadow-4 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .flex {
+    display: flex;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
