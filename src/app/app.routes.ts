@@ -7,12 +7,13 @@ import { authGuard } from './auth.guard';
 import { ServiceAComponent } from './components/service-a/service-a.component';
 
 export const routes: Routes = [
-    { path: 'products', component: ProductsComponent ,canActivate: [authGuard] },
-    { path: 'chart', component: ChartComponent ,canActivate: [authGuard] },
-    { path: 'historique', component: OrderHistoryComponent ,canActivate: [authGuard] },
+    { path: 'products', component: ProductsComponent  },
+    { path: 'chart', component: ChartComponent  },
+    { path: 'historique', component: OrderHistoryComponent  },
     { path: 'login', component: LoginComponent  },
     { path: 'services', component: ServiceAComponent  },
+    { path: '', component: LoginComponent  },
 
-    // Default route if none is specifiedng serv
-    
-  ];
+
+
+];

@@ -1,14 +1,71 @@
-/* products.component.css */
-.shadow-4 {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  .flex {
-    display: flex;
-  }
-  .align-items-center {
-    align-items: center;
-  }
-  .justify-content-between {
-    justify-content: space-between;
-  }
-  
+/* Styling for the header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 0 15px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions button {
+  margin-left: 10px;
+}
+
+.user-dropdown button {
+  background-color: #ff4500;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.notifications ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tasks ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.progress-bar {
+  height: 5px;
+  border-radius: 5px;
+}
+
+.bg-info {
+  background-color: #17a2b8;
+}
+
+.bg-warning {
+  background-color: #ffc107;
+}
+
+.bg-success {
+  background-color: #28a745;
+}

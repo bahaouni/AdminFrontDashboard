@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { ProductsComponent } from "./components/products/products.component";
+import {HeaderComponent} from "./header/header.component";
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,9 @@ import { ProductsComponent } from "./components/products/products.component";
     ButtonModule, // Importing PrimeNG's ButtonModule
     CommonModule,
     SidebarComponent,
-    ProductsComponent
-],
+    ProductsComponent,
+    HeaderComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
