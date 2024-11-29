@@ -1,35 +1,49 @@
 <!-- sidebar.component.html -->
 <aside class="sidebar">
+  <!-- Sidebar Header -->
   <div class="sidebar-header">
-    <h2>WeedingApp</h2>
+    <h2>ERSII</h2>
   </div>
-  <ul class="sidebar-links">
-    <h4>
-      <span>Main Menu</span>
-      <div class="menu-separator"></div>
-    </h4>
-    <li>
+
+  <!-- Main Menu -->
+  <ul class="sidebar-menu">
+    <h4 class="menu-title">Main Menu</h4>
+    <div class="menu-separator"></div>
+    <li class="menu-item">
       <a routerLink="/dashboard" routerLinkActive="active">
-        <span class="material-symbols-outlined"> dashboard </span>
+        <span class="material-symbols-outlined">dashboard</span>
+        <span class="menu-label">Dashboard</span>
       </a>
     </li>
-    <li>
+    <li class="menu-item">
       <a routerLink="/overview" routerLinkActive="active">
-        <span class="material-symbols-outlined"> overview </span>
+        <span class="material-symbols-outlined">insights</span>
+        <span class="menu-label">Overview</span>
+
       </a>
     </li>
-    <h4>
-      <span>General</span>
-      <div class="menu-separator"></div>
-    </h4>
-    <li>
+  </ul>
+
+  <!-- General Section -->
+  <ul class="sidebar-menu">
+    <h4 class="menu-title">General</h4>
+    <div class="menu-separator"></div>
+    <li class="menu-item">
       <a routerLink="/historique" routerLinkActive="active">
-        <span class="material-symbols-outlined"> Historique </span>
+        <span class="material-symbols-outlined">history</span>
+        <span class="menu-label">Historique</span>
       </a>
     </li>
-    <li>
+    <li class="menu-item">
       <a routerLink="/products" routerLinkActive="active">
-        <span class="material-symbols-outlined"> Products </span>
+        <span class="material-symbols-outlined">storefront</span>
+        <span class="menu-label">Products</span>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a routerLink="/">
+        <span class="material-symbols-outlined">storefront</span>
+        <span class="menu-label">Login</span>
       </a>
     </li>
   </ul>

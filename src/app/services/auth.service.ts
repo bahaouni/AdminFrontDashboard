@@ -11,9 +11,10 @@ export class AuthService {
   constructor(private http:HttpClient) { }
   email : string = "baha@baha.baha"
   password: string = "baha@baha.baha"
-  token:string =""
+  token:string ="";
+  isLoggedIn:boolean=true;
 
-  
+
   handleLogin() {
     this.http.post<{token:string}>('http://localhost:8088/api/v1/auth/authenticate', {
       email: this.email,
@@ -30,5 +31,8 @@ export class AuthService {
         console.error('Login failed', error);
       }
     );
+  }
+  getIsLoggedIn(){
+    return this.isLoggedIn;
   }
 }
