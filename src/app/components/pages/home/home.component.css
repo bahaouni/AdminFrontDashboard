@@ -9,18 +9,4 @@
     }
   }
 }
-.my-events-container, .service-search-container {
-  margin: 20px;
-}
 
-.events-list, .services-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-}
-
-mat-card {
-  padding: 16px;
-  border-radius: 8px;
-}

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-service-search',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './service-search.component.html',
   styleUrl: './service-search.component.css'
 })

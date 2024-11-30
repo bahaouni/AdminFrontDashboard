@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-my-events',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './my-events.component.html',
   styleUrl: './my-events.component.css'
 })
