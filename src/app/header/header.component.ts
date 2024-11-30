@@ -4,9 +4,9 @@ import {NgIf, NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
+  standalone: true,
   imports: [
     RouterLink,
     RouterLinkActive,

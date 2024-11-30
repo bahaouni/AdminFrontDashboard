@@ -1,8 +1,64 @@
-<div class="home-container">
-  <h1>Welcome to Your Event Planner</h1>
-  <p>Organize your events effortlessly!</p>
-  <div class="action-buttons">
-    <button mat-raised-button color="primary" routerLink="/my-events">View My Events</button>
-    <button mat-raised-button color="accent" routerLink="/service-search">Find Services</button>
+<div class="header-container">
+  <div class="logo">
+    <span class="logo-text">WP</span>
   </div>
+
+  <div class="nav-links">
+    <a href="/service-search" class="nav-link">Find services</a>
+    <a href="/my-events" class="nav-link">My Events</a>
+  </div>
+
+  <div class="user-profile">
+    <div class="avatar">
+      <img
+        ngSrc="app/assets/avatar.jpeg"
+        class="rounded-circle"
+        style="width: 45px; height: 45px;"
+        height="236" width="213" alt="Avatar"/>
+    </div>
+
+    <div class="user-info">
+      <span class="username">Anonymous</span>
+
+      <div class="auth-links">
+        <a href="/login" class="auth-link">Login</a> |
+        <a href="/register" class="auth-link">Register</a>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<div class="body-container">
+
+</div>
+
+<main class="app-main">
+  <section class="intro">
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+      <h2 class="welcome-title">Online Wedding Planning Assistant</h2>
+      <p class="welcome-description">
+        Your one-stop wedding planning website, with all the tools you need to create the dream celebration. No hidden fees! No sign-up required!
+      </p>
+      <button class="cta-button">Create new wedding project</button>
+    </div>
+
+    <!-- Illustration Section (Optional) -->
+    <div class="illustration-section">
+      <img src="assets/images/illustration.png" alt="Illustration" class="illustration-image"/>
+    </div>
+
+  </section>
+  <section class="illustration">
+    <!-- Replace with a placeholder or illustration -->
+    <div class="placeholder-illustration"></div>
+  </section>
+</main>
+
+<footer class="app-footer">
+  <p>
+    Are you a professional planner, vendor or venue? Start here:
+    <button>Business Portal</button>
+  </p>
+</footer>

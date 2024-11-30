@@ -7,9 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-service-a',
-  standalone: true,
   imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './service-a.component.html',
+  standalone: true,
   styleUrls: ['./service-a.component.css']
 })
 export class ServiceAComponent implements OnInit {

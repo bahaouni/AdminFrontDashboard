@@ -2,11 +2,10 @@ import { Component,OnInit  } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 
 @Component({
-  selector: 'app-chart',
-  standalone: true,
-  imports: [ChartModule],
-  templateUrl: './chart.component.html',
-  styleUrl: './chart.component.css'
+    selector: 'app-chart',
+    imports: [ChartModule],
+    templateUrl: './chart.component.html',
+    styleUrl: './chart.component.css'
 })
 export class ChartComponent implements OnInit {
   data: any;
