@@ -1,0 +1,29 @@
+<div class="service-search-container">
+  <h2>Find Services for Your Event</h2>
+
+  <!-- Form for Adding Services -->
+  <mat-card>
+    <mat-card-title>Suggest a New Service</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="addService()">
+        <mat-form-field appearance="fill">
+          <mat-label>Service Name</mat-label>
+          <input matInput [(ngModel)]="newService.name" name="name" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Cost</mat-label>
+          <input matInput [(ngModel)]="newService.cost" name="cost" type="number" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Add Service</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Services List -->
+  <div class="services-list">
+    <mat-card *ngFor="let service of services">
+      <mat-card-title>{{ service.name }}</mat-card-title>
+      <mat-card-subtitle>Cost: {{ service.cost | currency }}</mat-card-subtitle>
+    </mat-card>
+  </div>
+</div>

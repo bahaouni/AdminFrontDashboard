@@ -1,0 +1,32 @@
+<div class="my-events-container">
+  <h2>My Events</h2>
+
+  <!-- Form for Adding Events -->
+  <mat-card>
+    <mat-card-title>Create New Event</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="addEvent()">
+        <mat-form-field appearance="fill">
+          <mat-label>Event Name</mat-label>
+          <input matInput [(ngModel)]="newEvent.name" name="name" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Date</mat-label>
+          <input matInput [(ngModel)]="newEvent.date" name="date" type="date" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Add Event</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Events List -->
+  <div class="events-list">
+    <mat-card *ngFor="let event of events">
+      <mat-card-title>{{ event.name }}</mat-card-title>
+      <mat-card-subtitle>{{ event.date }}</mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-button color="accent" routerLink="/service-search">Search Services</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
