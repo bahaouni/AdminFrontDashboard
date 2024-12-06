@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
-import {HeaderComponent} from "../../../header/header.component";
+import {HeaderComponent} from "../componnents/header/header.component";
 import {NgIf, NgOptimizedImage} from "@angular/common";
+import {FooterComponent} from "../componnents/footer/footer.component";
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ import {NgIf, NgOptimizedImage} from "@angular/common";
     NgIf,
     RouterOutlet,
     NgOptimizedImage,
-    RouterLinkActive
+    RouterLinkActive,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   standalone: true,

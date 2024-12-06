@@ -1,0 +1,193 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header Styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #6c63ff;
+  color: white;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.auth-links {
+  font-size: 14px;
+}
+
+.auth-link {
+  color: white;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styles */
+.app-main {
+  padding: 30px;
+  text-align: center;
+}
+
+.intro .welcome-section {
+  margin-bottom: 40px;
+}
+
+.welcome-title {
+  font-size: 28px;
+  color: #6c63ff;
+  margin-bottom: 15px;
+}
+
+.welcome-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.cta-button {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #5753d9;
+}
+
+.illustration-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.vendors-section {
+  margin-top: 50px;
+}
+
+.vendors-section h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.vendors-section p {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.add-business-button {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-business-button:hover {
+  background-color: #5753d9;
+}
+
+/* Footer Styles */
+.business-portal-button {
+  text-align: center;
+  padding: 20px;
+  background-color: #6c63ff;
+  color: white;
+  margin-top: 40px;
+}
+
+.business-portal-cta {
+  background-color: white;
+  color: #6c63ff;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.business-portal-cta:hover {
+  background-color: #f1f1f1;
+  color: #6c63ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-info {
+    text-align: center;
+  }
+
+  .app-main {
+    padding: 20px;
+  }
+
+  .welcome-title {
+    font-size: 22px;
+  }
+
+  .welcome-description {
+    font-size: 16px;
+  }
+
+  .vendors-section h2 {
+    font-size: 20px;
+  }
+}
