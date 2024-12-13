@@ -5,7 +5,8 @@ import { HttpHeaders } from '@angular/common/http';
 
 @Component({
     selector: 'app-login',
-    imports: [FormsModule, HttpClientModule],
+  standalone: true,
+  imports: [FormsModule, HttpClientModule],
     templateUrl: './login.component.html',
     styleUrl: './login.component.css'
 })

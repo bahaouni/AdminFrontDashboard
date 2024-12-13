@@ -6,10 +6,10 @@ import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './auth.guard';
 import { ServiceAComponent } from './components/service-a/service-a.component';
 import {UsersComponent} from "./components/users/users.component";
-import {HomeComponent} from "./components/pages/home/home.component";
-import {MyEventsComponent} from "./components/pages/my-events/my-events.component";
-import {ServiceSearchComponent} from "./components/pages/service-search/service-search.component";
-import {BusinessComponent} from "./components/pages/business/business.component";
+import {HomeComponent} from "./components/Client-pages/home/home.component";
+import {MyEventsComponent} from "./components/Client-pages/my-events/my-events.component";
+import {ServiceSearchComponent} from "./components/Client-pages/service-search/service-search.component";
+import {BusinessComponent} from "./components/Client-pages/business/business.component";
 
 export const routes: Routes = [
     { path: 'products', component: ProductsComponent  },

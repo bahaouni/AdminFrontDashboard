@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-order-history',
-    imports: [CommonModule], // Import CommonModule here
+  standalone: true,
+
+  imports: [CommonModule], // Import CommonModule here
     templateUrl: './order-history.component.html',
     styleUrls: ['./order-history.component.css']
 })

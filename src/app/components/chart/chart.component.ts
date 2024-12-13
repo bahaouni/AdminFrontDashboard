@@ -3,7 +3,8 @@ import { ChartModule } from 'primeng/chart';
 
 @Component({
     selector: 'app-chart',
-    imports: [ChartModule],
+  standalone: true,
+  imports: [ChartModule],
     templateUrl: './chart.component.html',
     styleUrl: './chart.component.css'
 })
