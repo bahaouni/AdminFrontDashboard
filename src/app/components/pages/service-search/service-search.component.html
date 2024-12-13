@@ -1,9 +1,9 @@
 <div class="layout-container">
 
-  <app-sidebar *ngIf="isLoggedOut"></app-sidebar>
+  <app-sidebar></app-sidebar>
   <div class="content-container">
     <router-outlet>
-      <app-header *ngIf="isLoggedOut"></app-header>
+      <app-header></app-header>
     </router-outlet>
   </div>
 </div>

@@ -1,0 +1,36 @@
+.my-events-container, .service-search-container {
+  margin: 20px;
+}
+
+.events-list, .services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+mat-card {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.layout-container {
+  display: flex;
+  height: 100vh; /* Make the layout span the full height of the viewport */
+}
+
+app-sidebar {
+  width: 250px; /* Set the sidebar width */
+  background-color: #f8f9fa; /* Optional: Set a background color for the sidebar */
+}
+
+.content-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-below: 20px /* Allow scrolling if the content exceeds the viewport height */
+}
+
+
+
+
+

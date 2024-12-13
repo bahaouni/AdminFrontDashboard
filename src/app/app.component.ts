@@ -9,7 +9,6 @@ import {AuthService} from "./services/auth.service";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
     RouterOutlet,
     ButtonModule, // Importing PrimeNG's ButtonModule
@@ -19,6 +18,7 @@ import {AuthService} from "./services/auth.service";
     HeaderComponent
   ],
   templateUrl: './app.component.html',
+  standalone: true,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

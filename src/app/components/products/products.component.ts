@@ -8,9 +8,9 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @Component({
   selector: 'app-products',
-  standalone: true,
   imports: [CommonModule, TableModule, ButtonModule, RatingModule, TagModule, CurrencyPipe, FormsModule], // Add FormsModule here
   templateUrl: './products.component.html',
+  standalone: true,
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {

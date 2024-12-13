@@ -10,7 +10,10 @@
 
   .content-container {
     flex: 1;
-    padding: 16px; /* Optional: Add padding to the main content area */
     overflow-y: auto;
     margin-below: 20px /* Allow scrolling if the content exceeds the viewport height */
   }
+
+
+
+
