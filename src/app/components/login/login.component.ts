@@ -11,8 +11,8 @@ import { HttpHeaders } from '@angular/common/http';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  email : string = "baha@baha.baha"
-  password: string = "baha@baha.baha"
+  email : string = ""
+  password: string = "  "
   token:string = ""
   constructor(private http:HttpClient ){
 
@@ -37,5 +37,5 @@ export class LoginComponent {
   handleLogout(){
     localStorage.removeItem('token');
   }
-  
+
 }
