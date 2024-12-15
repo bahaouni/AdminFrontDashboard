@@ -30,7 +30,7 @@ export class ServiceAService {
   getUsers(): Observable<UserDTO[]> {
     return this.http.get<UserDTO[]>(`${this.api3}`);
   }
-    getOrders(): Observable<Order[]> {
+  getOrders(): Observable<Order[]> {
     return this.http.get<Order[]>(`${this.api2}`);
     }
 

@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <div class="card mt-4">
+        <div class="card-body">
+          <form [formGroup]="registerForm" (ngSubmit)="signUp()">
+            <h1>Register</h1>
+            <p>Create your account</p>
+
+            <!-- Full Name Field -->
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                formControlName="fullName"
+                class="form-control"
+                placeholder="Full Name"
+              />
+              <div *ngIf="registerForm.get('fullName')?.touched && registerForm.get('fullName')?.invalid" class="text-danger">
+                <small *ngIf="registerForm.get('fullName')?.errors?.['required']">Full Name is required.</small>
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                formControlName="email"
+                class="form-control"
+                placeholder="Email"
+              />
+              <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid" class="text-danger">
+                <small *ngIf="registerForm.get('email')?.errors?.['required']">Email is required.</small>
+                <small *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email format.</small>
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                id="password"
+                formControlName="password"
+                class="form-control"
+                placeholder="Password"
+              />
+              <div *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid" class="text-danger">
+                <small *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</small>
+                <small *ngIf="registerForm.get('password')?.errors?.['minlength']">
+                  Password must be at least 6 characters long.
+                </small>
+              </div>
+            </div>
+
+            <!-- Repeat Password Field -->
+            <div class="mb-4">
+              <label for="repeatPassword" class="form-label">Repeat Password</label>
+              <input
+                type="password"
+                id="repeatPassword"
+                formControlName="repeatPassword"
+                class="form-control"
+                placeholder="Repeat password"
+              />
+              <div *ngIf="registerForm.get('repeatPassword')?.touched && registerForm.get('repeatPassword')?.invalid" class="text-danger">
+                <small *ngIf="registerForm.get('repeatPassword')?.errors?.['required']">Repeat password is required.</small>
+                <small *ngIf="registerForm.errors?.['mismatch']">Passwords do not match.</small>
+              </div>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Create Account</button>
+            </div>
+          </form>
+
+          <p class="mt-3">
+            Already have an account? <a href="#" (click)="goToLogin()">Login</a>
+          </p>
+          <p>
+            Want to register as a conductor? <a href="#" (click)="goToRegisterConductor()">Register as Conductor</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

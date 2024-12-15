@@ -1,0 +1,15 @@
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.login{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}

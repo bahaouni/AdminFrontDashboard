@@ -29,7 +29,7 @@ export class AppComponent {
   constructor(private authService: AuthService, private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        const definedRoutes = ['/dashboard', '/products', '/historique','/services','/Users']; // Add all defined routes here
+        const definedRoutes = ['/dashboard', '/products', '/historique','/services','/Users',]; // Add all defined routes here
         this.isLoggedOut = definedRoutes.includes(event.urlAfterRedirects);
       }
     });
