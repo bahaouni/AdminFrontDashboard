@@ -5,21 +5,24 @@
       <div class="card-header">
         <div class="header-content">
           <h2 class="card-title">User #{{ order.id }}</h2>
-          <span class="badge" [ngClass]="order.badgeClass">{{ order.status }}</span>
         </div>
       </div>
       <div class="card-content">
         <div class="content-row">
-          <span class="label">Date:</span>
-          <span>{{ order.date }}</span>
+          <span class="label">FirstName:</span>
+          <span>{{ order.firstName }}</span>
         </div>
         <div class="content-row">
-          <span class="label">Items Purchased:</span>
-          <span>{{ order.items }}</span>
+        <span class="label">LastName:</span>
+        <span>{{ order.LastName }}</span>
+      </div>
+        <div class="content-row">
+          <span class="label">Date</span>
+          <span>{{ order.Date }}</span>
         </div>
         <div class="content-row">
-          <span class="label">Total Amount:</span>
-          <span>${{ order.total }}</span>
+          <span class="label">Email</span>
+          <span>{{ order.Email }}</span>
         </div>
       </div>
       <div class="card-footer">
