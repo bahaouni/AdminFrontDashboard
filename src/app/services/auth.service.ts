@@ -16,7 +16,7 @@ export class AuthService {
 
 
   handleLogin() {
-    this.http.post<{token:string}>('http://localhost:8088/api/v1/auth/authenticate', {
+    this.http.post<{token:string}>('http://localhost:8091/api/v1/auth/authenticate', {
       email: this.email,
       password: this.password
     }).subscribe(
