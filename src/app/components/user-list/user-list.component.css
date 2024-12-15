@@ -1,0 +1,28 @@
+.button-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .role-dropdown {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .button-container button {
+    margin-left: 10px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+  }
+  

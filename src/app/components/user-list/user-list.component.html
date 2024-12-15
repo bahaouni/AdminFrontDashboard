@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <h2>User List</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Role</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.firstname }}</td>
+          <td>{{ user.lastname }}</td>
+          <td>{{ user.roles[0]?.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <div class="button-container">
+              <select class="form-control role-dropdown" [(ngModel)]="user.role">
+                <option value="USER" [selected]="user.role === 'USER'">USER</option>
+                <option value="ADMIN" [selected]="user.role === 'ADMIN'">ADMIN</option>
+              </select>
+              <button class="btn btn-primary ml-2" (click)="changeRole(user.email, user.role)">Change Role</button>
+              <button class="btn btn-danger ml-2" (click)="deleteUser(user.email)">Delete</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="pagination">
+      <button class="btn btn-secondary" (click)="loadPreviousPage()" [disabled]="page === 0">Previous</button>
+      <span>Page {{ page + 1 }} of {{ totalPages }}</span>
+      <button class="btn btn-secondary" (click)="loadNextPage()" [disabled]="page === totalPages - 1">Next</button>
+    </div>
+  
+    <button class="btn btn-primary mt-3" (click)="loadUsers()">Load More</button>
+  </div>
+  
