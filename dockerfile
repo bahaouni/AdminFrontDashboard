@@ -1,25 +1,20 @@
-# Stage 1: Build Stage
-FROM node:18-alpine AS builder
+# Use official Node.js image as base
+FROM node:18-alpine
 
+# Set working directory inside the container
 WORKDIR /app
 
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
-RUN npm install --silent
+# Install dependencies
+RUN npm install --legacy-peer-deps
 
+# Copy the rest of the application code
 COPY . .
 
-RUN npm run build -- --output-path=dist
+# Expose port 4200
+EXPOSE 4200
 
-# Stage 2: Production Stage
-FROM nginx:alpine
-
-# Copy the custom nginx.conf to the container
-COPY nginx.conf /etc/nginx/nginx.conf
-
-# Copy the build output from the builder to the NGINX HTML directory
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-EXPOSE 8010
-
-CMD ["nginx", "-g", "daemon off;"]
+# Run Angular development server
+CMD ["npm", "start"]
