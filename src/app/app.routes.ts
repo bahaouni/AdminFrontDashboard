@@ -16,12 +16,12 @@ export const routes: Routes = [
     { path: 'chart', component: ChartComponent  },
     { path: 'historique', component: OrderHistoryComponent  },
     { path: 'services', component: ServiceAComponent  },
-    { path: 'Users', component: UsersComponent  },
+    { path: 'Users', component: UsersComponent },
     { path: 'home', component: HomeComponent },
     { path: 'my-events', component: MyEventsComponent },
     { path: 'service-search', component: ServiceSearchComponent },
     { path: 'business', component: BusinessComponent },
-    { path: '**', component: LoginComponent  },
+    { path: '**', component: LoginComponent },
 
 
 
