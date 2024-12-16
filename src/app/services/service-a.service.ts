@@ -10,9 +10,9 @@ import {Order} from "../model/Order";
   providedIn: 'root',
 })
 export class ServiceAService {
-  private services = 'http://localhost:8089/services/v1/service/';
-  private api2 = 'http://localhost:8088/services/v1/Orders/'
-  private api3 = 'http://localhost:8088/services/v1/Users/'
+  private services = 'http://localhost:8088/api/v1/ServiceA/';
+  private api2 = 'http://localhost:8088/api/v1/Orders/'
+  private api3 = 'http://localhost:8088/api/v1/Users/'
   constructor(private http: HttpClient) {}
 
   getServices(): Observable<ServiceA[]> {
@@ -25,12 +25,12 @@ export class ServiceAService {
     return this.http.delete<void>(`${this.services}${id}`);
   }
   addService(serviceA: ServiceA): Observable<ServiceA> {
-    return this.http.post<ServiceA>(`${this.services}add`, serviceA);
+    return this.http.post<ServiceA>(`${this.services}create`, serviceA);
   }
   getUsers(): Observable<UserDTO[]> {
     return this.http.get<UserDTO[]>(`${this.api3}`);
   }
-    getOrders(): Observable<Order[]> {
+  getOrders(): Observable<Order[]> {
     return this.http.get<Order[]>(`${this.api2}`);
     }
 

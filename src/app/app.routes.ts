@@ -11,6 +11,7 @@ import {MyEventsComponent} from "./components/Client-pages/my-events/my-events.c
 import {ServiceSearchComponent} from "./components/Client-pages/service-search/service-search.component";
 import {BusinessComponent} from "./components/Client-pages/business/business.component";
 import { UserListComponent } from './components/user-list/user-list.component';
+import {RegisterComponent} from "./register/register.component";
 
 export const routes: Routes = [
     { path: 'products', component: ProductsComponent },
@@ -22,6 +23,7 @@ export const routes: Routes = [
     { path: 'my-events', component: MyEventsComponent },
     { path: 'service-search', component: ServiceSearchComponent },
     { path: 'business', component: BusinessComponent },
+    { path: 'register', component: RegisterComponent },
     { path: 'user-list', component: UserListComponent },
     { path: '**', component: LoginComponent },
 
