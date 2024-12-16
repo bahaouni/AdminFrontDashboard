@@ -34,7 +34,7 @@ header.container {
 .logo {
   font-size: 34px;
   font-weight: bold;
-  color: #6200ea;
+  color: purple;
   margin-left: 20px;
 }
 
@@ -52,7 +52,7 @@ header.container {
 }
 
 .nav-link:hover {
-  color: #6200ea;
+  color: purple;
 }
 
 /* User profile section */
@@ -70,10 +70,10 @@ header.container {
 
 .auth-link {
   text-decoration: none;
-  color: #6200ea;
+  color: purple;
   font-weight: bold;
 }
 
 .auth-link:hover {
-  color: #3700b3;
+  color: purple;
 }

@@ -1,15 +1,55 @@
-.my-events-container, .service-search-container {
-  margin: 20px;
+/* General Styling */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  justify-content: space-between;
 }
 
-.events-list, .services-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
+.projects-container {
+  text-align: center;
+  margin: 20px auto;
+
+}
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.project, .create-project {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.create-project .add-folder {
+  font-size: 50px;
+  color: purple;
 }
 
-mat-card {
-  padding: 16px;
+/* for the cards*/
+.event-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
   border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+  margin-top: 0;
+}
+
+.create-project .add-folder {
+  font-size: 50px;
+  color: #8a2be2;
 }
