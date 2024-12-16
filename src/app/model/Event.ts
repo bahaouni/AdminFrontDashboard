@@ -1,7 +1,7 @@
 import {Service} from "./Service";
 
 export interface Event {
-  id: number;
+  id?: number;
   name: string;
   date:string;
   createdDate:string;

@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, NgForm} from "@angular/forms";
 import {HeaderComponent} from "../componnents/header/header.component";
 import {DatePipe, NgForOf, NgIf} from "@angular/common";
 import {RouterOutlet} from "@angular/router";
 import {SidebarComponent} from "../../sidebar/sidebar.component";
 import {FooterComponent} from "../componnents/footer/footer.component";
-import {EventService} from "./event.service";
+import {EventService} from "../../../services/event.service";
+import {Service} from "../../../model/Service";
 
 @Component({
   selector: 'app-my-events',
@@ -27,11 +28,14 @@ export class MyEventsComponent implements OnInit {
 
   events: any[] = [];
   loading: boolean = true;
-
+  showModal: boolean = false;
   constructor(private eventService: EventService) { }
 
   ngOnInit(): void {
+    this.loadEvents();
+  }
 
+  private loadEvents() {
     this.eventService.getEvents().subscribe(
       (data) => {
         console.log("data: ", data);
@@ -43,6 +47,34 @@ export class MyEventsComponent implements OnInit {
         this.loading = false;
       }
     );
+  }
 
+  showCreateModal(): void {
+    this.showModal = true;
+  }
+
+  closeCreateModal(): void {
+    this.showModal = false;
+  }
+
+  onSubmit(form: NgForm): void {
+    if (form.valid) {
+      const newEvent= {
+        name: form.value.name,
+        date: form.value.date
+      };
+
+      this.eventService.addEvent(newEvent).subscribe({
+        next: (response) => {
+          console.log('Event created:', response);
+          this.events.push(response);
+          this.closeCreateModal();
+          form.reset();
+        },
+        error: (error) => {
+          console.error('Error creating event:', error);
+        },
+      });
+    }
   }
 }

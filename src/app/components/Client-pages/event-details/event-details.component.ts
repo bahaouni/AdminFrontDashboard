@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {EventService} from "../my-events/event.service";
+import {EventService} from "../../../services/event.service";
+import {DatePipe, NgForOf, NgIf} from "@angular/common";
+import {FooterComponent} from "../componnents/footer/footer.component";
+import {HeaderComponent} from "../componnents/header/header.component";
 
 @Component({
   selector: 'app-event-details',
-  imports: [],
+  imports: [
+    DatePipe,
+    FooterComponent,
+    HeaderComponent,
+    NgForOf,
+    NgIf
+  ],
   templateUrl: './event-details.component.html',
   standalone: true,
   styleUrl: './event-details.component.css'

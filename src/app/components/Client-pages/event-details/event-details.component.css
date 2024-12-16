@@ -1,0 +1,16 @@
+/* General Styling */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.projects-container {
+  text-align: center;
+  margin: 20px auto;
+}
