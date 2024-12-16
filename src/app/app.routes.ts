@@ -10,17 +10,19 @@ import {HomeComponent} from "./components/Client-pages/home/home.component";
 import {MyEventsComponent} from "./components/Client-pages/my-events/my-events.component";
 import {ServiceSearchComponent} from "./components/Client-pages/service-search/service-search.component";
 import {BusinessComponent} from "./components/Client-pages/business/business.component";
+import { UserListComponent } from './components/user-list/user-list.component';
 
 export const routes: Routes = [
-    { path: 'products', component: ProductsComponent  },
-    { path: 'chart', component: ChartComponent  },
-    { path: 'historique', component: OrderHistoryComponent  },
-    { path: 'services', component: ServiceAComponent  },
+    { path: 'products', component: ProductsComponent },
+    { path: 'chart', component: ChartComponent },
+    { path: 'historique', component: OrderHistoryComponent },
+    { path: 'services', component: ServiceAComponent },
     { path: 'Users', component: UsersComponent },
     { path: 'home', component: HomeComponent },
     { path: 'my-events', component: MyEventsComponent },
     { path: 'service-search', component: ServiceSearchComponent },
     { path: 'business', component: BusinessComponent },
+    { path: 'user-list', component: UserListComponent },
     { path: '**', component: LoginComponent },
 
 
