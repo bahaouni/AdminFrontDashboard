@@ -1,10 +1,24 @@
-<app-sidebar/>
-<div class="content-container">
-  <router-outlet>
-    <app-header/>
-  </router-outlet>
-</div>
-<div class="my-events-container">
-  <h2>My Events</h2>
+<app-header></app-header>
 
+<div class="projects-container">
+  <h2>Projects</h2>
+  <div *ngIf="loading">Loading events...</div>
+
+  <div *ngIf="!loading && events.length === 0">No events found.</div>
+
+  <div class="projects">
+    <a *ngFor="let event of events" class="project" href="project/{{ event.id }}">
+      <div class="folder">
+        <p>{{ event.name }}</p>
+        <p><strong>Date:</strong> {{ event.date | date }}</p>
+      </div>
+    </a>
+
+    <div class="create-project">
+      <div class="add-folder">+</div>
+      <p>Create new project</p>
+    </div>
+  </div>
 </div>
+
+<app-footer></app-footer>

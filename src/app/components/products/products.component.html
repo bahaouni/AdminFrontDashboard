@@ -1,6 +1,6 @@
 <div class="card mb-4">
   <div class="card-header">
-    <h3>Products List</h3>
+    <h3>Services List</h3>
     <input
       type="text"
       class="form-control"
@@ -13,27 +13,24 @@
       <thead>
       <tr>
         <th>#</th>
-        <th>Product Name</th>
-        <th>Category</th>
+        <th>Service Name</th>
+        <th>Description</th>
         <th>Price</th>
+        <th>Capacity</th>
         <th>Rating</th>
-        <th>Inventory Status</th>
         <th style="text-align: right;">Actions</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let product of products; let i = index">
+      <tr *ngFor="let service of services; let i = index">
         <td>{{ i + 1 }}</td>
-        <td>{{ product.name }}</td>
-        <td>{{ product.category }}</td>
-        <td>{{ product.price | currency }}</td>
+        <td>{{ service.name }}</td>
+        <td>{{ service.description}}</td>
+        <td>{{ service.price | currency }}</td>
+        <td>{{ service.capacity }}</td>
+
         <td>
           <p-rating  [readonly]="true" stars="5"></p-rating>
-        </td>
-        <td>
-            <span [ngClass]="'badge bg-' + getSeverity(product.inventoryStatus)">
-              {{ product.inventoryStatus }}
-            </span>
         </td>
         <td style="text-align: right;">
           <button class="btn btn-primary me-2">

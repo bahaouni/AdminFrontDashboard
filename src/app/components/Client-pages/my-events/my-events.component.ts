@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import {HeaderComponent} from "../../../header/header.component";
-import {NgIf} from "@angular/common";
+import {HeaderComponent} from "../componnents/header/header.component";
+import {DatePipe, NgForOf, NgIf} from "@angular/common";
 import {RouterOutlet} from "@angular/router";
 import {SidebarComponent} from "../../sidebar/sidebar.component";
+import {FooterComponent} from "../componnents/footer/footer.component";
+import {EventService} from "./event.service";
 
 @Component({
   selector: 'app-my-events',
@@ -12,23 +14,35 @@ import {SidebarComponent} from "../../sidebar/sidebar.component";
     HeaderComponent,
     NgIf,
     RouterOutlet,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent,
+    DatePipe,
+    NgForOf,
   ],
   templateUrl: './my-events.component.html',
   standalone: true,
   styleUrl: './my-events.component.css'
 })
-export class MyEventsComponent {
-  events = [
-    { name: 'Conference', date: '2024-12-01' },
-    { name: 'Birthday Party', date: '2024-12-10' },
-  ];
-  newEvent = { name: '', date: '' };
+export class MyEventsComponent implements OnInit {
 
-  addEvent() {
-    if (this.newEvent.name && this.newEvent.date) {
-      this.events.push({ ...this.newEvent });
-      this.newEvent = { name: '', date: '' };
-    }
+  events: any[] = [];
+  loading: boolean = true;
+
+  constructor(private eventService: EventService) { }
+
+  ngOnInit(): void {
+
+    this.eventService.getEvents().subscribe(
+      (data) => {
+        console.log("data: ", data);
+        this.events = data;
+        this.loading = false;
+      },
+      (error) => {
+        console.error('Error fetching events:', error);
+        this.loading = false;
+      }
+    );
+
   }
 }
