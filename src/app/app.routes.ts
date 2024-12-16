@@ -11,6 +11,7 @@ import {MyEventsComponent} from "./components/Client-pages/my-events/my-events.c
 import {ServiceSearchComponent} from "./components/Client-pages/service-search/service-search.component";
 import {BusinessComponent} from "./components/Client-pages/business/business.component";
 import { UserListComponent } from './components/user-list/user-list.component';
+import { ServicesPageComponent } from './components/Client-pages/services-page/services-page.component';
 import {RegisterComponent} from "./register/register.component";
 import {EventDetailsComponent} from "./components/Client-pages/event-details/event-details.component";
 
@@ -26,6 +27,11 @@ export const routes: Routes = [
     { path: 'business', component: BusinessComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'user-list', component: UserListComponent },
+    { path: 'services-page', component: ServicesPageComponent },
+
+    { path: '**', component: LoginComponent  },
+
+
     { path: 'project/:id', component: EventDetailsComponent },
     { path: '**', component: LoginComponent },
 
