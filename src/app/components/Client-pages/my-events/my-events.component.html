@@ -1,29 +1,22 @@
 <app-header></app-header>
 
 <div class="projects-container">
-  <h2>Wedding Projects</h2>
+  <h2>Projects</h2>
   <div *ngIf="loading">Loading events...</div>
 
   <div *ngIf="!loading && events.length === 0">No events found.</div>
 
   <div class="projects">
-    <div class="project">
+    <a *ngFor="let event of events" class="project" href="project/{{ event.id }}">
       <div class="folder">
-        <p>First project</p>
-        <small>Updated on: 06 Dec</small>
+        <p>{{ event.name }}</p>
+        <p><strong>Date:</strong> {{ event.date | date }}</p>
       </div>
-    </div>
+    </a>
+
     <div class="create-project">
       <div class="add-folder">+</div>
-      <p>Create new wedding project</p>
-    </div>
-  </div>
-
-  <div class="projects">
-    <div *ngFor="let event of events" class="event-card">
-      <h3>{{ event.name }}</h3>
-      <p><strong>Date:</strong> {{ event.date | date:'medium' }}</p>
-      <p><strong>Created on:</strong> {{ event.createdDate | date:'medium' }}</p>
+      <p>Create new project</p>
     </div>
   </div>
 </div>

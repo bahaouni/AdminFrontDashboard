@@ -13,14 +13,39 @@
 .projects-container {
   text-align: center;
   margin: 20px auto;
-
 }
+
 .projects {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.project, .create-project {
+
+/* Style clickable projects */
+.project {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.project:hover {
+  background-color: purple;
+  color: #fff;
+  border-color: purple;
+  box-shadow: 0 4px 10px rgba(128, 0, 128, 0.3);
+}
+
+.create-project {
   width: 200px;
   height: 150px;
   border: 1px solid #ccc;
@@ -31,25 +56,8 @@
   flex-direction: column;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .create-project .add-folder {
   font-size: 50px;
   color: purple;
-}
-
-/* for the cards*/
-.event-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.event-card h3 {
-  margin-top: 0;
-}
-
-.create-project .add-folder {
-  font-size: 50px;
-  color: #8a2be2;
 }

@@ -1,10 +1,10 @@
 import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ServiceA } from '../model/models';
 import { Observable } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import {UserDTO} from "../model/User";
 import {Order} from "../model/Order";
+import {ServiceA} from "../model/ServiceA";
 
 @Injectable({
   providedIn: 'root',
