@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ServiceA } from '../../model/models'; // Import the ServiceA model
+import { ServiceA } from '../../model/ServiceA'; // Import the ServiceA model
 import { FormsModule } from '@angular/forms';
 import { ServiceAService } from '../../services/service-a.service';
 import { HttpClientModule } from '@angular/common/http';

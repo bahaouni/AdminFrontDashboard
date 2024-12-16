@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import {Router, RouterLink, RouterLinkActive} from "@angular/router";
 import {NgIf, NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -19,6 +19,8 @@ export class HeaderComponent {
   public user = {
     avatar: 'assets/images/avatars/8.jpg', // Path to user avatar image
   };
+  constructor(private router: Router) {
+  }
 
   // Example menu items for notifications and tasks
   public newNotifications = [
@@ -39,8 +41,7 @@ export class HeaderComponent {
   // Logout function
   logout(): void {
     localStorage.removeItem('auth token');
-    alert('Logged out successfully!');
-  }
+      this.router.navigate(['login']);  }
 
   // Placeholder methods for showing notifications and tasks
   showNotifications(): void {

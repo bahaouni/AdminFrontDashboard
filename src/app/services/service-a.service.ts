@@ -1,6 +1,6 @@
 import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ServiceA } from '../model/models';
+import { ServiceA } from '../model/ServiceA';
 import { Observable } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import {UserDTO} from "../model/User";
@@ -10,7 +10,7 @@ import {Order} from "../model/Order";
   providedIn: 'root',
 })
 export class ServiceAService {
-  private api = 'http://localhost:8088/api/v1/ServiceA/';
+  private api = 'http://localhost:8091/api/v1/ServiceA/';
   private api2 = 'http://localhost:8088/api/v1/Orders/'
   private api3 = 'http://localhost:8088/api/v1/Users/'
   constructor(private http: HttpClient) {}
@@ -25,10 +25,7 @@ export class ServiceAService {
     return this.http.delete<void>(`${this.api}${id}`);
   }
   addService(serviceA: ServiceA): Observable<ServiceA> {
-    return this.http.post<ServiceA>(`${this.api}add`, serviceA);
-  }
-  getUsers(): Observable<UserDTO[]> {
-    return this.http.get<UserDTO[]>(`${this.api3}`);
+    return this.http.post<ServiceA>(`${this.api}create`, serviceA);
   }
   getOrders(): Observable<Order[]> {
     return this.http.get<Order[]>(`${this.api2}`);
