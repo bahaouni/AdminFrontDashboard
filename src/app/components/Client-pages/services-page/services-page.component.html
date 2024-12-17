@@ -2,7 +2,7 @@
 <div class="container my-5">
     <!-- Header Section -->
     <div class="text-center mb-5">
-      <h2 style="color: #5a189a;">Services for {{ eventName }}</h2>
+      <h2 style="color: purple;">Services for {{ eventName }}</h2>
       <p class="lead">Explore the services included in your event plan.</p>
     </div>
   
@@ -15,7 +15,7 @@
             <h5 class="card-title">{{ service.name }}</h5>
             <p class="card-text text-muted">{{ service.description }}</p>
             <div class="mt-auto d-flex justify-content-between align-items-center">
-              <p class="fw-bold mb-0" style="color: #5a189a;">$ {{ service.price }}</p>
+              <p class="fw-bold mb-0" style="color: purple;">$ {{ service.price }}</p>
               <button class="btn btn-primary btn-sm" (click)="bookService(service)">
                 Book Now
               </button>
