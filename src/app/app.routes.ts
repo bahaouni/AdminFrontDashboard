@@ -16,23 +16,21 @@ import {RegisterComponent} from "./register/register.component";
 import {EventDetailsComponent} from "./components/Client-pages/event-details/event-details.component";
 
 export const routes: Routes = [
-    { path: 'products', component: ProductsComponent },
-    { path: 'chart', component: ChartComponent },
-    { path: 'historique', component: OrderHistoryComponent },
-    { path: 'services', component: ServiceAComponent },
-    { path: 'Users', component: UsersComponent },
-    { path: 'home', component: HomeComponent },
-    { path: 'my-events', component: MyEventsComponent },
-    { path: 'service-search', component: ServiceSearchComponent },
-    { path: 'business', component: BusinessComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'user-list', component: UserListComponent },
-    { path: 'services-page', component: ServicesPageComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'chart', component: ChartComponent },
+  { path: 'historique', component: OrderHistoryComponent },
+  { path: 'services', component: ServiceAComponent },
+  { path: 'Users', component: UsersComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'my-events', component: MyEventsComponent },
+  { path: 'service-search', component: ServiceSearchComponent },
+  { path: 'business', component: BusinessComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'user-list', component: UserListComponent },
+  { path: 'services-page', component: ServicesPageComponent },
+  { path: 'project/:id', component: EventDetailsComponent },
 
-    { path: '**', component: LoginComponent  },
+  { path: '**', component: LoginComponent },
 
-
-    { path: 'project/:id', component: EventDetailsComponent },
-    { path: '**', component: LoginComponent },
 
 ];
