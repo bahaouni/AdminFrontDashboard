@@ -34,6 +34,7 @@ export class ServiceAComponent implements OnInit {
   getServices() {
     this.serviceAService.getServices().subscribe({
       next: (response) => {
+        console.log('Fetched services:', response); // Log response
         this.services = response;
       },
       error: (err) => {
@@ -41,6 +42,7 @@ export class ServiceAComponent implements OnInit {
       }
     });
   }
+  
 
   addService() {
     this.serviceAService.addService(this.serviceA).subscribe({
