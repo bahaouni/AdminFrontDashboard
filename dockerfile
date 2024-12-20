@@ -1,20 +1,19 @@
-# Use official Node.js image as base
-FROM node:18-alpine
+FROM node:18.13.0 as build
 
-# Set working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
+RUN npm install -g @angular/cli
+
 COPY . .
 
-# Expose port 4200
-EXPOSE 4200
+RUN ng build --configuration=production
 
-# Run Angular development server
-CMD ["npm", "start"]
+FROM nginx:latest
+
+COPY --from=build app/dist/aftas-angular /usr/share/nginx/html
+
+EXPOSE 80

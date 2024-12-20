@@ -29,6 +29,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: azizdhoukar/ps5:front-app
+          tags: azizdhoukar/ps5:angular-app
 
 
