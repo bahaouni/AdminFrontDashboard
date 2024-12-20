@@ -3,7 +3,7 @@ name: CI and Dockerization
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test_build_dockerize:
