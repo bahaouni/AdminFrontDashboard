@@ -14,6 +14,6 @@ RUN ng build --configuration=production
 
 FROM nginx:latest
 
-COPY --from=build app/dist/dashboard /usr/share/nginx/html
+COPY --from=build /app/dist/dashboard/browser /usr/share/nginx/html
 
 EXPOSE 80
