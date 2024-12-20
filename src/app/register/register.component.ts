@@ -11,7 +11,6 @@ import {NgIf} from "@angular/common";
   styleUrls: ['./register.component.css'],
   imports: [
     ReactiveFormsModule,
-    NgIf
   ]
 })
 export class RegisterComponent implements OnInit {

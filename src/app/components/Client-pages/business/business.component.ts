@@ -8,7 +8,6 @@ import {NgOptimizedImage} from "@angular/common";
   imports: [
     HeaderComponent,
     FooterComponent,
-    NgOptimizedImage
   ],
   templateUrl: './business.component.html',
   standalone: true,

@@ -10,7 +10,6 @@ import {SidebarComponent} from "../../sidebar/sidebar.component";
   imports: [
     FormsModule,
     HeaderComponent,
-    NgIf,
     RouterOutlet,
     SidebarComponent
   ],

@@ -7,12 +7,7 @@ import {FooterComponent} from "../componnents/footer/footer.component";
 @Component({
   selector: 'app-home',
   imports: [
-    RouterLink,
     HeaderComponent,
-    NgIf,
-    RouterOutlet,
-    NgOptimizedImage,
-    RouterLinkActive,
     FooterComponent
   ],
   templateUrl: './home.component.html',

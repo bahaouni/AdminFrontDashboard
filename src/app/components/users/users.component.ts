@@ -6,7 +6,6 @@ import {NgClass, NgForOf} from "@angular/common";
   standalone: true,
   imports: [
     NgForOf,
-    NgClass
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'

@@ -7,7 +7,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterOutlet],
+  imports: [CommonModule, FormsModule],
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })

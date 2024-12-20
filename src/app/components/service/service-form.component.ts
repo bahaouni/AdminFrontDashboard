@@ -1,38 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ServiceA } from '../../model/ServiceA'; // Import the ServiceA model
+import { Service } from '../../model/Service';
 import { FormsModule } from '@angular/forms';
-import { ServiceAService } from '../../services/service-a.service';
+import { ServiceService } from '../../services/service.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-service-a',
   imports: [CommonModule, FormsModule, HttpClientModule],
-  templateUrl: './service-a.component.html',
+  templateUrl: './service-form.component.html',
   standalone: true,
-  styleUrls: ['./service-a.component.css']
+  styleUrls: ['./service-form.component.css']
 })
-export class ServiceAComponent implements OnInit {
+export class ServiceFormComponent implements OnInit {
   isEditMode: boolean = false;
-  serviceA: ServiceA = {
+  service: Service = {
     id: 0,
+    adminId: 0,
     name: '',
     description: '',
     price: 0,
-    capacity: 0,
-    availability: []
+    category: ''
   };
-  services: ServiceA[] = [];
+  services: Service[] = [];
   newDate: string = '';
 
-  constructor(private serviceAService: ServiceAService) {}
+  constructor(private serviceService: ServiceService) {}
 
   ngOnInit(): void {
     this.getServices();
   }
 
   getServices() {
-    this.serviceAService.getServices().subscribe({
+    this.serviceService.getServices().subscribe({
       next: (response) => {
         console.log('Fetched services:', response); // Log response
         this.services = response;
@@ -42,10 +42,10 @@ export class ServiceAComponent implements OnInit {
       }
     });
   }
-  
+
 
   addService() {
-    this.serviceAService.addService(this.serviceA).subscribe({
+    this.serviceService.addService(this.service).subscribe({
       next: (response) => {
         this.services.push(response);
         this.resetForm();
@@ -57,7 +57,7 @@ export class ServiceAComponent implements OnInit {
   }
 
   updateService() {
-    this.serviceAService.updateService(this.serviceA).subscribe({
+    this.serviceService.updateService(this.service).subscribe({
       next: (response) => {
         const index = this.services.findIndex(s => s.id === response.id);
         if (index !== -1) this.services[index] = response;
@@ -70,7 +70,7 @@ export class ServiceAComponent implements OnInit {
   }
 
   deleteService(serviceId: number) {
-    this.serviceAService.deleteService(serviceId).subscribe({
+    this.serviceService.deleteService(serviceId).subscribe({
       next: () => {
         this.services = this.services.filter(service => service.id !== serviceId);
       },
@@ -80,35 +80,36 @@ export class ServiceAComponent implements OnInit {
     });
   }
 
-  editService(service: ServiceA) {
+  editService(service: Service) {
     this.isEditMode = true;
-    this.serviceA = { ...service };
+    this.service = { ...service };
   }
 
   saveService() {
     this.isEditMode ? this.updateService() : this.addService();
   }
-
+  /*
   addDate() {
-    if (this.newDate && !this.serviceA.availability.includes(this.newDate)) {
-      this.serviceA.availability.push(this.newDate);
+    if (this.newDate && !this.service.availability.includes(this.newDate)) {
+      this.service.availability.push(this.newDate);
       this.newDate = '';
     }
   }
 
   removeDate(index: number) {
-    this.serviceA.availability.splice(index, 1);
+    this.service.availability.splice(index, 1);
   }
+ */
 
   resetForm() {
     this.isEditMode = false;
-    this.serviceA = {
+    this.service = {
       id: 0,
+      adminId: 0,
       name: '',
       description: '',
       price: 0,
-      capacity: 0,
-      availability: []
+      category: ''
     };
     this.newDate = '';
   }

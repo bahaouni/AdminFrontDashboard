@@ -14,8 +14,6 @@ import {Service} from "../../../model/Service";
     FormsModule,
     HeaderComponent,
     NgIf,
-    RouterOutlet,
-    SidebarComponent,
     FooterComponent,
     DatePipe,
     NgForOf,

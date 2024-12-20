@@ -11,10 +11,9 @@ import {AuthService} from "./services/auth.service";
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    ButtonModule, // Importing PrimeNG's ButtonModule
+    ButtonModule,
     CommonModule,
     SidebarComponent,
-    ProductsComponent,
     HeaderComponent
   ],
   templateUrl: './app.component.html',

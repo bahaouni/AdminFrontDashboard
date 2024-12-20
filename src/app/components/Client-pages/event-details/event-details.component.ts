@@ -8,11 +8,8 @@ import {HeaderComponent} from "../componnents/header/header.component";
 @Component({
   selector: 'app-event-details',
   imports: [
-    DatePipe,
     FooterComponent,
     HeaderComponent,
-    NgForOf,
-    NgIf
   ],
   templateUrl: './event-details.component.html',
   standalone: true,

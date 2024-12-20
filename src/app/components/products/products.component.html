@@ -16,7 +16,6 @@
         <th>Service Name</th>
         <th>Description</th>
         <th>Price</th>
-        <th>Capacity</th>
         <th>Rating</th>
         <th style="text-align: right;">Actions</th>
       </tr>
@@ -27,7 +26,6 @@
         <td>{{ service.name }}</td>
         <td>{{ service.description}}</td>
         <td>{{ service.price | currency }}</td>
-        <td>{{ service.capacity }}</td>
 
         <td>
           <p-rating  [readonly]="true" stars="5"></p-rating>

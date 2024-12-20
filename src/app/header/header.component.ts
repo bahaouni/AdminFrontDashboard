@@ -10,7 +10,6 @@ import {NgIf, NgOptimizedImage} from "@angular/common";
   imports: [
     RouterLink,
     RouterLinkActive,
-    NgIf,
     NgOptimizedImage
   ]
 })

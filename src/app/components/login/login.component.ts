@@ -25,7 +25,7 @@ export class LoginComponent {
     }).subscribe(
       response => {
         console.log(response);
-        const token = response.token;  // Extract the token
+        const token = response.token;
         console.log('Token:', token);
         localStorage.setItem('token', token);
         this.router.navigate(['/dashboard']);

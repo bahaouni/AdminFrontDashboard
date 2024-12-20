@@ -5,10 +5,9 @@ import { ButtonModule } from 'primeng/button';
 import { RatingModule } from 'primeng/rating';
 import { TagModule } from 'primeng/tag';
 import { FormsModule } from '@angular/forms';
-import {ServiceAService} from "../../services/service-a.service";
+import {ServiceService} from "../../services/service.service";
 import {Router} from "@angular/router";
 import {Service} from "../../model/Service";
-import {ServiceA} from "../../model/ServiceA"; // Import FormsModule
 
 @Component({
   selector: 'app-products',
@@ -19,14 +18,14 @@ import {ServiceA} from "../../model/ServiceA"; // Import FormsModule
 })
 export class ProductsComponent {
 
-  constructor(private ServiceA: ServiceAService, private router: Router) {}
+  constructor(private Service: ServiceService, private router: Router) {}
   ngOnInit(): void {
     this.getServices();
   }
-  services: ServiceA[]=[];
+  services: Service[]=[];
 
   getServices() {
-    this.ServiceA.getServices().subscribe({
+    this.Service.getServices().subscribe({
       next: (response) => {
         console.log(response);
         this.services = response;
