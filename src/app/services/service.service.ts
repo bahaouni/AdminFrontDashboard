@@ -4,14 +4,15 @@ import { Observable } from 'rxjs';
 import { Service } from '../model/Service';
 import { UserDTO } from '../model/User';
 import { Order } from '../model/Order';
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServiceService {
-  private eventURL = 'http://localhost:8089';
-  private orderApi = 'http://localhost:8088/api/v1/Orders';
-  private userApi = 'http://localhost:8088/api/v1/Users';
+  private eventURL = environment.eventURL;
+  private orderURL = environment.orderURL;
+  private authURL = environment.authURL;
 
   constructor(private http: HttpClient) {}
   getServices(): Observable<Service[]> {
@@ -31,10 +32,10 @@ export class ServiceService {
   }
 
   getUsers(): Observable<UserDTO[]> {
-    return this.http.get<UserDTO[]>(this.userApi);
+    return this.http.get<UserDTO[]>(this.authURL + '/api/v1/Users');
   }
 
   getOrders(): Observable<Order[]> {
-    return this.http.get<Order[]>(this.orderApi);
+    return this.http.get<Order[]>(this.orderURL + '/api/v1/Orders');
   }
 }

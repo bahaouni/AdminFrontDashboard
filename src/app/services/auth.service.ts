@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {jwtDecode } from 'jwt-decode';
-import { HttpClientModule } from '@angular/common/http'; // Import this module
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +13,11 @@ export class AuthService {
   token:string ="";
   isLoggedIn:boolean=true;
 
+  private authURL = environment.authURL;
+
 
   handleLogin() {
-    this.http.post<{token:string}>('http://localhost:8088/api/v1/auth/authenticate', {
+    this.http.post<{token:string}>(`${this.authURL}/api/v1/auth/authenticate`, {
       email: this.email,
       password: this.password
     }).subscribe(
