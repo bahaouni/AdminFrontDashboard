@@ -1,29 +1,32 @@
-# Step 1: Use a Node image to build the Angular app
-FROM node:18 AS build
+name: CI and Dockerization
 
-  # Set working directory
-WORKDIR /app
+on:
+  push:
+    branches:
+      - master
 
-  # Copy package.json and package-lock.json
-COPY package*.json ./
+jobs:
+  test_build_dockerize:
+    runs-on: ubuntu-latest
 
-  # Install dependencies
-RUN npm install
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  # Copy the Angular project files to the container
-COPY . .
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-  # Build the Angular app
-RUN npm run build --prod
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: azizdhoukar  # Use secrets for production
+          password: dckr_pat_f4szj9gJ7kku6kw0Fl3zoReo_QA  # Use secrets for production
 
-  # Step 2: Use a lightweight web server to serve the app
-FROM nginx:alpine
-
-  # Copy the Angular build output to the Nginx HTML directory
-COPY --from=build /app/dist/<your-app-name> /usr/share/nginx/html
-
-  # Expose the default Nginx port
-EXPOSE 80
-
-  # Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: azizdhoukar/ps5:front-app
