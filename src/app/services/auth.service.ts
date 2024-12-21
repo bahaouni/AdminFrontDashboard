@@ -16,10 +16,10 @@ export class AuthService {
   private authURL = environment.authURL;
 
 
-  handleLogin() {
+  handleLogin(email:string, password:string) {
     this.http.post<{token:string}>(`${this.authURL}/api/v1/auth/authenticate`, {
-      email: this.email,
-      password: this.password
+      email: email,
+      password: password
     }).subscribe(
       response => {
         console.log(response);
