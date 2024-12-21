@@ -16,12 +16,12 @@ import {RegisterComponent} from "./register/register.component";
 import {EventDetailsComponent} from "./components/Client-pages/event-details/event-details.component";
 
 export const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'chart', component: ChartComponent },
   { path: 'historique', component: OrderHistoryComponent },
   { path: 'services', component: ServiceFormComponent },
   { path: 'Users', component: UsersComponent },
-  { path: 'home', component: HomeComponent },
   { path: 'my-events', component: MyEventsComponent },
   { path: 'business', component: BusinessComponent },
   { path: 'register', component: RegisterComponent },

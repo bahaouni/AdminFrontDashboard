@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  eventURL: 'event-management-service',
-  orderURL: 'order-service',
-  authURL: 'auth',
+  eventURL: 'http://event-management-service',
+  orderURL: 'http://order-service',
+  authURL: 'http://auth',
 };
