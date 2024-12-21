@@ -17,8 +17,7 @@ export class LoginComponent {
   password: string = ""
   token:string = ""
 
-  private authService: AuthService
-  constructor(private router: Router ){}
+  constructor(private router: Router, private authService: AuthService){}
   handleLogin() {
     this.authService.handleLogin(this.email, this.password)
   }
