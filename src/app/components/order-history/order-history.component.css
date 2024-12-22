@@ -1,94 +1,28 @@
-.order-history {
-    width: 100%;
-    padding: 24px;
-  }
-  
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-  
-  .order-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    overflow: hidden;
-  }
-  
-  .card-header {
-    padding: 16px;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .badge {
-    padding: 4px 8px;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 4px;
-  }
-  
-  .badge-delivered {
-    background-color: #d1e7dd;
-    color: #0f5132;
-  }
-  
-  .badge-pending {
-    background-color: #fff3cd;
-    color: #856404;
-  }
-  
-  .badge-cancelled {
-    background-color: #f8d7da;
-    color: #842029;
-  }
-  
-  .card-content {
-    padding: 16px;
-  }
-  
-  .content-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
-  
-  .label {
-    font-weight: 500;
-  }
-  
-  .card-footer {
-    padding: 16px;
-    background-color: #f1f1f1;
-    text-align: right;
-  }
-  
-  .link {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.role-dropdown {
+  width: auto;
+  margin-right: 10px;
+}
+
+.button-container button {
+  margin-left: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+}
+
