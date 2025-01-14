@@ -19,7 +19,7 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'chart', component: ChartComponent },
-  { path: 'historique', component: OrderHistoryComponent , canActivate: [AuthGuard], data: { roles: ['admin'] } },
+  { path: 'historique', component: OrderHistoryComponent , canActivate: [AuthGuard], data: { roles: ['ADMIN'] } },
   { path: 'services', component: ServiceFormComponent },
   { path: 'Users', component: UsersComponent },
   { path: 'my-events', component: MyEventsComponent },
